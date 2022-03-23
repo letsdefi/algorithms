@@ -1,4 +1,4 @@
-export function binary_search<T>(list: T[], item: T): number | null {
+export function binarySearch<T>(list: T[], item: T): number | null {
   let low: number = 0;
   let high: number = list.length - 1;
   while (low <= high) {

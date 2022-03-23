@@ -1,3 +1,9 @@
+/**
+ * Находит индекс самого маленького значения в заданном массиве.
+ * Сложность: O(n) - так как проходимся по каждому элементу массива
+ * @param array
+ * @returns
+ */
 function findSmallestIndex<T>(array: T[]): number {
   let smallestIndex: number = 0;
   let smallestElement: T = array[smallestIndex];
@@ -12,7 +18,13 @@ function findSmallestIndex<T>(array: T[]): number {
   return smallestIndex;
 }
 
-function selectionSort<T>(array: T[]): T[] {
+/**
+ * Сортировка выбором
+ * Сложность: O(n2)
+ * @param array
+ * @returns
+ */
+export function selectionSort<T>(array: T[]): T[] {
   const sortedArray: T[] = [];
   const length = array.length;
 
@@ -23,5 +35,3 @@ function selectionSort<T>(array: T[]): T[] {
 
   return sortedArray;
 }
-
-console.log(selectionSort([5, 3, 6, 2, 10])); // [2, 3, 5, 6, 10]
