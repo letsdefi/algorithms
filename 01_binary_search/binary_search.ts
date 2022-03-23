@@ -1,3 +1,9 @@
+/**
+ * Binary Search | Бинарный поиск
+ * @param list
+ * @param item
+ * @returns
+ */
 export function binarySearch<T>(list: T[], item: T): number | null {
   let low: number = 0;
   let high: number = list.length - 1;
