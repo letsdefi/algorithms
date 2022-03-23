@@ -14,4 +14,7 @@ describe("Binary search:", () => {
   it("should find item in list with 1000 items and return 963", () => {
     expect(binarySearch(items.list_with_1000_items, 9713)).toBe(963);
   });
+  it("should return null", () => {
+    expect(binarySearch(items.list_with_1000_items, 19713)).toBe(null);
+  });
 });
