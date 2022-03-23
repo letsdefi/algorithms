@@ -1,4 +1,4 @@
-import { sumRecursive } from "./sum_recursive";
+import { sumRecursive } from "../01_sum_recursion";
 describe("Recursion:", () => {
   it("should sum items in array using recursion", () => {
     let items = [5, 3, 2];
