@@ -1,4 +1,4 @@
-import { binarySearch } from "./binary_search";
+import { binarySearch } from "../01_binary_search";
 import items from "./items.json";
 
 describe("Binary search:", () => {

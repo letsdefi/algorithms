@@ -1,4 +1,4 @@
-import { selectionSort } from "./selection_sort";
+import { selectionSort } from "../01_selection_sort";
 
 describe("Selection sort:", () => {
   it("should sort items", () => {
