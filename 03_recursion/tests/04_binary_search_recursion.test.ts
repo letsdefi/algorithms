@@ -1,20 +1,22 @@
-import { binarySearchRecursion as binarySearch } from "../04_binary_search_recursion";
-import items from "../../01_binary_search/items.json";
+import { binarySearch } from "../04_binary_search_recursion";
 
 describe("Binary search:", () => {
-  // it("should find item in a simple list and return 2", () => {
-  //   expect(binarySearch(items.simple_list, 4)).toBe(2);
-  // });
-  it("should find item in list with 10 items and return 8", () => {
-    expect(binarySearch(items.list_with_10_items, 18)).toBe(8);
+  // Сформируем массив по которому будем искать
+  let array = [];
+  const start = 0;
+  const end = 2;
+  for (let i = start; i <= end; i++) {
+    array.push(i);
+  }
+
+  // Для каждого элемента массива запустим тест
+  for (let i = start; i <= end; i++) {
+    it(`should find item ${i}`, () => {
+      expect(binarySearch(array, i)).toBe(i);
+    });
+  }
+
+  it("should return null", () => {
+    expect(binarySearch(array, end + 1)).toBe(null);
   });
-  // it("should find item in list with 100 items and return 69", () => {
-  //   expect(binarySearch(items.list_with_100_items, 6472)).toBe(69);
-  // });
-  // it("should find item in list with 1000 items and return 963", () => {
-  //   expect(binarySearch(items.list_with_1000_items, 9713)).toBe(963);
-  // });
-  // it("should return null", () => {
-  //   expect(binarySearch(items.list_with_1000_items, 19713)).toBe(null);
-  // });
 });

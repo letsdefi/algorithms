@@ -1,15 +1,14 @@
 /**
  * Возвращает количество элементов в массиве используя рекурсию
+ * Внимание! Алгоритм не эффективен и не стоит использовать в рабочих проектах
+ * Сложность алгоритма: O(n)
  * @param items
  * @returns
- * Сложность алгоритма: O(n)
+
  */
 export function countRecursion<T>(items: T[]): number {
-  let itemsLength = items.length;
-  if (itemsLength === 1) {
-    return 1;
+  if (items.length === 0) {
+    return 0;
   }
-  for (let i = 0; i < itemsLength; i++) {
-    return 1 + countRecursion(items.slice(0, -1));
-  }
+  return 1 + countRecursion(items.slice(1));
 }

@@ -1,15 +1,16 @@
 /**
  * Рекурсивная функция сложения всех элементов в массиве
- * @param items
+ * Внимание! Алгоритм не эффективен и не стоит использовать в рабочих проектах
+ * Сложность алгоритма: O(n)
+ * @param array
  * @returns
  */
-export function sumRecursive(items: number[]): number {
-  let itemsLength = items.length;
-  if (itemsLength === 1) {
-    return items[0];
+export function sum(array: number[]): number {
+  switch (array.length) {
+    case 0:
+      return null;
+    case 1:
+      return array[0];
   }
-  for (let i = 0; i < itemsLength; i++) {
-    const last = items[itemsLength - 1];
-    return last + sumRecursive(items.slice(0, -1));
-  }
+  return array[0] + sum(array.slice(1));
 }

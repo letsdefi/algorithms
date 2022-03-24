@@ -1,5 +1,5 @@
 import { binarySearch } from "../01_binary_search";
-import items from "../items.json";
+import items from "./items.json";
 
 describe("Binary search:", () => {
   it("should find item in a simple list and return 2", () => {
